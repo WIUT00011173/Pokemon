@@ -10,6 +10,7 @@ body {
   width: 100%;
   background-color: bisque;
   padding: 20px;
+  overflow-y: scroll;
 }
 
 body > h1 {
@@ -20,6 +21,7 @@ body > h1 {
 
 .bAfter::after {
   content: '';
+  height: 125%;
   background-color: rgba(240, 237, 234, 0.616);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);

@@ -126,7 +126,17 @@ for (let pokemon of pokemons) {
         }
     })
 
+    // window.addEventListener("click", function(e) {
+    //     if(document.querySelector(".modal").contains(e.target)){
+    //         console.log("you clicked inside")
+    //     }
+    //     else {
+    //         console.log("you clicked outside")
+    //         close()
+    //     }
+    // })
     
+
 
     function close() {
         modal.classList.remove("show")
