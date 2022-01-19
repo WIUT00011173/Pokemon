@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: bisque;
+  padding: 20px;
+}
+
+body > h1 {
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.bAfter::after {
+  content: '';
+  background-color: rgba(240, 237, 234, 0.616);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  gap: 70px;
+}
+
+.grid-container .pokemon {
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  text-align: center;
+  padding: 15px 20px;
+  background-color: burlywood;
+  height: 250px;
+  width: 200px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-radius: 7px;
+}
+
+.grid-container .pokemon:hover {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+  width: 400px;
+  height: 400px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background-color: rgba(161, 140, 140, 0.658);
+  position: absolute;
+  z-index: 100;
+  top: -100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.modal .modalDiv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.modal .modalDiv h2, .modal .modalDiv h3 {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.modal .modalDiv p {
+  font-family: sans-serif;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.modal pre {
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+
+.show {
+  top: 50%;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 100%;
+  }
+  .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
