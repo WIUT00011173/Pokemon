@@ -113,7 +113,7 @@ for (let pokemon of pokemons) {
         const stats = document.createElement("h3")
         stats.innerText = "Statistics :"
         const preText = document.createElement("pre")
-        preText.innerText = "Press 'esc' to Exit"
+        preText.innerText = "Press 'esc' or click inside to Exit"
         
         modal.appendChild(preText)
         modalDiv.appendChild(modalName)
@@ -126,15 +126,15 @@ for (let pokemon of pokemons) {
         }
     })
 
-    // window.addEventListener("click", function(e) {
-    //     if(document.querySelector(".modal").contains(e.target)){
-    //         console.log("you clicked inside")
-    //     }
-    //     else {
-    //         console.log("you clicked outside")
-    //         close()
-    //     }
-    // })
+    if(document.querySelector(".modal")) {
+        body.classList.add("working")
+        body.addEventListener('click', function(event) {
+        if (document.querySelector(".modalDiv").contains(event.target)) {
+            close()
+            }
+        });
+    }
+
     
 
 
