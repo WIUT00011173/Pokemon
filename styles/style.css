@@ -138,6 +138,13 @@ body > h1 {
 @media (max-width: 600px) {
   body {
     height: 100%;
+    width: 100%;
+  }
+  .bAfter::after {
+    height: 100%;
+  }
+  .show {
+    top: 50%;
   }
   .grid-container {
     display: -webkit-box;
