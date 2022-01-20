@@ -146,7 +146,10 @@ for (let pokemon of pokemons) {
     }
 
     document.addEventListener("keydown", (event)=> {
-        if(event.key = "Escape") close()
+        if(event.key === "Escape") close()
+        else {
+            //nothing happen
+        }
     })
 
     
