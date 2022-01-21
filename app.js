@@ -127,7 +127,7 @@ for (let pokemon of pokemons) {
         if(document.querySelector(".modal")) {
             body.classList.add("working")
             body.addEventListener('click', function(event) {
-            if (!document.querySelector(".modalDiv").contains(event.target)) {
+            if (document.querySelector(".modalDiv").contains(event.target)) {
                 close()
                 }
             });
