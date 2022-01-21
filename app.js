@@ -124,15 +124,15 @@ for (let pokemon of pokemons) {
             statis.innerText = `${character}: ${pokemon.stats[character]}`
             modalDiv.appendChild(statis)
         }
-        if(document.querySelector(".modal")) {
-            body.classList.add("working")
-            body.addEventListener('click', function(event) {
-            if (document.querySelector(".modalDiv").contains(event.target)) {
-                close()
-                }
-            });
-        }
     })
+    if(document.querySelector(".modal")) {
+        body.classList.add("working")
+        body.addEventListener('click', function(event) {
+        if (document.querySelector(".modalDiv").contains(event.target)) {
+            close()
+            }
+        });
+    }
 
 
     
